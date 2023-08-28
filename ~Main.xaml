@@ -162,6 +162,7 @@
       <AssemblyReference>Google.Apis</AssemblyReference>
       <AssemblyReference>Google.Apis.Core</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>GlobalVariablesT1PNoYwrqg</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="910,6913" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -686,7 +687,7 @@
                         <umabf:MailFilterArgument LogicalOperator="And">
                           <umabf:MailFilterArgument.Filters>
                             <scg:List x:TypeArguments="umabf:SingleMailFilterArgument" Capacity="1">
-                              <umabf:SingleMailFilterArgument DateEqualsFilter="{x:Null}" Criteria="Body" DateFilter="SevenDays" Operator="Contains" Value="command:fetch" />
+                              <umabf:SingleMailFilterArgument DateEqualsFilter="{x:Null}" Criteria="Body" DateFilter="SevenDays" Operator="Contains" Value="command:" />
                             </scg:List>
                           </umabf:MailFilterArgument.Filters>
                         </umabf:MailFilterArgument>

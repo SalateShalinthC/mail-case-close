@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1488,4515" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ugm="clr-namespace:UiPath.GSuite.Models;assembly=UiPath.GSuite" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uibi="http://schemas.uipath.com/workflow/infrastructure/baf/uibi" xmlns:uiisi="http://schemas.uipath.com/workflow/infrastructure/is/uiisi" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabf="clr-namespace:UiPath.Mail.Activities.Business.ForEachMail;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:usia="clr-namespace:UiPath.Salesforce.IntegrationService.Activities;assembly=UiPath.Salesforce.IntegrationService.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="934,5195" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ugm="clr-namespace:UiPath.GSuite.Models;assembly=UiPath.GSuite" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uibi="http://schemas.uipath.com/workflow/infrastructure/baf/uibi" xmlns:uiisi="http://schemas.uipath.com/workflow/infrastructure/is/uiisi" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabf="clr-namespace:UiPath.Mail.Activities.Business.ForEachMail;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:usia="clr-namespace:UiPath.Salesforce.IntegrationService.Activities;assembly=UiPath.Salesforce.IntegrationService.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -162,9 +162,10 @@
       <AssemblyReference>Google.Apis</AssemblyReference>
       <AssemblyReference>Google.Apis.Core</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>case process.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="846,4450" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="922,5130" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="message" />
       <Variable x:TypeArguments="x:String" Default="shalinth01@gmail.com" Name="MailId1" />
@@ -188,25 +189,25 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="784,4339" sap2010:WorkflowViewState.IdRef="Sequence_34">
+    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="860,5019" sap2010:WorkflowViewState.IdRef="Sequence_34">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <umab:OutlookApplicationCard Account="SalateShalinthC@clarium.tech" AccountMismatchBehavior="UseDefaultEmailAccount" DisplayName="Opening Outlook" sap:VirtualizedContainerService.HintSize="722,4228" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_3">
+      <umab:OutlookApplicationCard Account="SalateShalinthC@clarium.tech" AccountMismatchBehavior="UseDefaultEmailAccount" DisplayName="Opening Outlook" sap:VirtualizedContainerService.HintSize="798,4908" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_3">
         <umab:OutlookApplicationCard.Body>
           <ActivityAction x:TypeArguments="um:IMailQuickHandle">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Outlook" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="688,4048" sap2010:WorkflowViewState.IdRef="Sequence_33">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="764,4728" sap2010:WorkflowViewState.IdRef="Sequence_33">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <umab:ForEachEmailX DisplayName="Retrieveing all the unread mails" sap:VirtualizedContainerService.HintSize="626,3937" sap2010:WorkflowViewState.IdRef="ForEachEmailX_3" IncludeSubfolders="False" NumberOfEmailsLimit="100" RetrieveAttachments="False" UnreadOnly="True" WithAttachmentsOnly="False">
+              <umab:ForEachEmailX DisplayName="Retrieveing all the unread mails" sap:VirtualizedContainerService.HintSize="702,4617" sap2010:WorkflowViewState.IdRef="ForEachEmailX_3" IncludeSubfolders="False" NumberOfEmailsLimit="100" RetrieveAttachments="False" UnreadOnly="True" WithAttachmentsOnly="False">
                 <umab:ForEachEmailX.Body>
                   <ActivityAction x:TypeArguments="snm:MailMessage, x:Int32">
                     <ActivityAction.Argument1>
@@ -215,7 +216,7 @@
                     <ActivityAction.Argument2>
                       <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                     </ActivityAction.Argument2>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,3686" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="668,4366" sap2010:WorkflowViewState.IdRef="Sequence_27">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="assigned" />
                         <Variable x:TypeArguments="s:String[]" Name="word" />
@@ -223,13 +224,14 @@
                         <Variable x:TypeArguments="x:Int32" Name="work" />
                         <Variable x:TypeArguments="x:String" Name="fit" />
                         <Variable x:TypeArguments="x:String" Name="caseId" />
+                        <Variable x:TypeArguments="x:Boolean" Name="exists" />
                       </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:MultipleAssign DisplayName="Getting all the details needed from the mail and incrementing" sap:VirtualizedContainerService.HintSize="530,256" sap2010:WorkflowViewState.IdRef="MultipleAssign_6">
+                      <ui:MultipleAssign DisplayName="Getting all the details needed from the mail and incrementing" sap:VirtualizedContainerService.HintSize="606,256" sap2010:WorkflowViewState.IdRef="MultipleAssign_6">
                         <ui:MultipleAssign.AssignOperations>
                           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_25">
@@ -307,7 +309,7 @@
                           </scg:List>
                         </ui:MultipleAssign.AssignOperations>
                       </ui:MultipleAssign>
-                      <If sap:VirtualizedContainerService.HintSize="530,890" sap2010:WorkflowViewState.IdRef="If_6">
+                      <If sap:VirtualizedContainerService.HintSize="606,890" sap2010:WorkflowViewState.IdRef="If_6">
                         <If.Condition>
                           <InArgument x:TypeArguments="x:Boolean">
                             <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_168">work &gt;= 0</CSharpValue>
@@ -381,18 +383,12 @@
                           </Sequence>
                         </If.Else>
                       </If>
-                      <usia:InsertRecord ActivityInstanceId="cfcc6a78-36e1-4484-878d-6c494360c29b" BindingsVersion="2.1" BusinessEntityName="Case" ConfiguredBusinessEntity="" ConnectionId="10ed0ce1-cb1f-4429-8e21-d1932902f56e" Connector="uipath-salesforce-sfdc" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="Insert Cases with New status" sap:VirtualizedContainerService.HintSize="530,185" sap2010:WorkflowViewState.IdRef="InsertRecord_3">
+                      <usia:InsertRecord ActivityInstanceId="cfcc6a78-36e1-4484-878d-6c494360c29b" BindingsVersion="2.1" BusinessEntityName="Case" ConfiguredBusinessEntity="" ConnectionId="10ed0ce1-cb1f-4429-8e21-d1932902f56e" Connector="uipath-salesforce-sfdc" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="Insert Cases with New status" sap:VirtualizedContainerService.HintSize="606,185" sap2010:WorkflowViewState.IdRef="InsertRecord_3">
                         <usia:InsertRecord.BusinessEntity>
-                          <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID6}" Name="Case">
+                          <uibi:BusinessEntity Name="Case">
                             <uibi:BusinessEntity.AllFields>
                               <scg:List x:TypeArguments="uibi:EntityField" Capacity="24">
-                                <uiisi:OperationEntityField x:TypeArguments="x:String" OutArgumentValue="{x:Reference __ReferenceID1}" Value="{x:Reference __ReferenceID0}" x:Name="__ReferenceID7" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="Case ID" DisplayName="Case ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="True" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Id" ShouldFilterOnChange="False">
-                                  <uiisi:OperationEntityField.ArgumentValue>
-                                    <OutArgument x:TypeArguments="x:String" x:Name="__ReferenceID1">
-                                      <CSharpReference x:TypeArguments="x:String" x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="CSharpReference`1_66">caseId</CSharpReference>
-                                    </OutArgument>
-                                  </uiisi:OperationEntityField.ArgumentValue>
-                                </uiisi:OperationEntityField>
+                                <x:Reference>__ReferenceID6</x:Reference>
                                 <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Account ID" DisplayName="Account ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="AccountId" ShouldFilterOnChange="False" />
                                 <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Asset ID" DisplayName="Asset ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="AssetId" ShouldFilterOnChange="False" />
                                 <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Case Origin" DisplayName="Case Origin" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Origin" ShouldFilterOnChange="False">
@@ -418,40 +414,11 @@
                                   </uiisi:OperationEntityField.EnumValues>
                                 </uiisi:OperationEntityField>
                                 <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Case Source ID" DisplayName="Case Source ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="SourceId" ShouldFilterOnChange="False" />
-                                <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Case Type" DisplayName="Case Type" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Type" ShouldFilterOnChange="False">
-                                  <uiisi:OperationEntityField.EnumValues>
-                                    <scg:List x:TypeArguments="x:String" Capacity="5">
-                                      <x:String>Mechanical</x:String>
-                                      <x:String>Electrical</x:String>
-                                      <x:String>Electronic</x:String>
-                                      <x:String>Structural</x:String>
-                                      <x:String>Other</x:String>
-                                    </scg:List>
-                                  </uiisi:OperationEntityField.EnumValues>
-                                </uiisi:OperationEntityField>
-                                <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID10" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Company" DisplayName="Company" FormDataType="ExpressionTextBox" InArgumentValue="Clarium.org" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="SuppliedCompany" ShouldFilterOnChange="False">
-                                  <uiisi:OperationEntityField.ArgumentValue>
-                                    <InArgument x:TypeArguments="x:String">Clarium.org</InArgument>
-                                  </uiisi:OperationEntityField.ArgumentValue>
-                                  <uiisi:OperationEntityField.Value>
-                                    <Literal x:TypeArguments="x:String">Clarium.org</Literal>
-                                  </uiisi:OperationEntityField.Value>
-                                </uiisi:OperationEntityField>
+                                <x:Reference>__ReferenceID7</x:Reference>
+                                <x:Reference>__ReferenceID8</x:Reference>
                                 <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Contact ID" DisplayName="Contact ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="ContactId" ShouldFilterOnChange="False" />
-                                <uiisi:OperationEntityField x:TypeArguments="x:String" InArgumentValue="{x:Reference __ReferenceID3}" Value="{x:Reference __ReferenceID2}" x:Name="__ReferenceID8" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Description" DisplayName="Description" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Description" ShouldFilterOnChange="False">
-                                  <uiisi:OperationEntityField.ArgumentValue>
-                                    <InArgument x:TypeArguments="x:String" x:Name="__ReferenceID3">
-                                      <CSharpValue x:TypeArguments="x:String" x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="CSharpValue`1_174">sub</CSharpValue>
-                                    </InArgument>
-                                  </uiisi:OperationEntityField.ArgumentValue>
-                                </uiisi:OperationEntityField>
-                                <uiisi:OperationEntityField x:TypeArguments="x:String" InArgumentValue="{x:Reference __ReferenceID5}" Value="{x:Reference __ReferenceID4}" x:Name="__ReferenceID11" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Email Address" DisplayName="Email Address" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="SuppliedEmail" ShouldFilterOnChange="False">
-                                  <uiisi:OperationEntityField.ArgumentValue>
-                                    <InArgument x:TypeArguments="x:String" x:Name="__ReferenceID5">
-                                      <CSharpValue x:TypeArguments="x:String" x:Name="__ReferenceID4" sap2010:WorkflowViewState.IdRef="CSharpValue`1_175">fix</CSharpValue>
-                                    </InArgument>
-                                  </uiisi:OperationEntityField.ArgumentValue>
-                                </uiisi:OperationEntityField>
+                                <x:Reference>__ReferenceID9</x:Reference>
+                                <x:Reference>__ReferenceID10</x:Reference>
                                 <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Engineering Req Number" DisplayName="Engineering Req Number" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="True" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="EngineeringReqNumber__c" ShouldFilterOnChange="False" />
                                 <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" DataType="Boolean" Description="Escalated" DisplayName="Escalated" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="IsEscalated" ShouldFilterOnChange="False" />
                                 <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Internal Comments" DisplayName="Internal Comments" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Comments" ShouldFilterOnChange="False" />
@@ -467,21 +434,7 @@
                                     </scg:List>
                                   </uiisi:OperationEntityField.EnumValues>
                                 </uiisi:OperationEntityField>
-                                <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID12" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Priority" DisplayName="Priority" FormDataType="ExpressionTextBox" InArgumentValue="Medium" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Priority" ShouldFilterOnChange="False">
-                                  <uiisi:OperationEntityField.ArgumentValue>
-                                    <InArgument x:TypeArguments="x:String">Medium</InArgument>
-                                  </uiisi:OperationEntityField.ArgumentValue>
-                                  <uiisi:OperationEntityField.EnumValues>
-                                    <scg:List x:TypeArguments="x:String" Capacity="3">
-                                      <x:String>High</x:String>
-                                      <x:String>Medium</x:String>
-                                      <x:String>Low</x:String>
-                                    </scg:List>
-                                  </uiisi:OperationEntityField.EnumValues>
-                                  <uiisi:OperationEntityField.Value>
-                                    <Literal x:TypeArguments="x:String">Medium</Literal>
-                                  </uiisi:OperationEntityField.Value>
-                                </uiisi:OperationEntityField>
+                                <x:Reference>__ReferenceID11</x:Reference>
                                 <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Product" DisplayName="Product" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="True" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Product__c" ShouldFilterOnChange="False">
                                   <uiisi:OperationEntityField.EnumValues>
                                     <scg:List x:TypeArguments="x:String" Capacity="9">
@@ -505,45 +458,30 @@
                                     </scg:List>
                                   </uiisi:OperationEntityField.EnumValues>
                                 </uiisi:OperationEntityField>
-                                <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID9" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Status" DisplayName="Status" FormDataType="ExpressionTextBox" InArgumentValue="New" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Status" ShouldFilterOnChange="False">
-                                  <uiisi:OperationEntityField.ArgumentValue>
-                                    <InArgument x:TypeArguments="x:String">New</InArgument>
-                                  </uiisi:OperationEntityField.ArgumentValue>
-                                  <uiisi:OperationEntityField.EnumValues>
-                                    <scg:List x:TypeArguments="x:String" Capacity="4">
-                                      <x:String>New</x:String>
-                                      <x:String>Working</x:String>
-                                      <x:String>Escalated</x:String>
-                                      <x:String>Closed</x:String>
-                                    </scg:List>
-                                  </uiisi:OperationEntityField.EnumValues>
-                                  <uiisi:OperationEntityField.Value>
-                                    <Literal x:TypeArguments="x:String">New</Literal>
-                                  </uiisi:OperationEntityField.Value>
-                                </uiisi:OperationEntityField>
+                                <x:Reference>__ReferenceID12</x:Reference>
                                 <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Subject" DisplayName="Subject" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Subject" ShouldFilterOnChange="False" />
                               </scg:List>
                             </uibi:BusinessEntity.AllFields>
                             <uibi:BusinessEntity.EntityMetadata>
-                              <uibi:EntityMetadata DisplayName="Case" EligibleOperations="1" IsCustomEntity="False" Name="Case">
-                                <uibi:EntityMetadata.Metadata>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID6">
-                                    <x:String x:Key="Object">Case</x:String>
-                                    <x:String x:Key="FullPath">/Case</x:String>
-                                    <x:String x:Key="Method">POST</x:String>
-                                    <x:Null x:Key="BaseObject" />
-                                  </scg:Dictionary>
-                                </uibi:EntityMetadata.Metadata>
-                              </uibi:EntityMetadata>
+                              <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID13}" DisplayName="Case" EligibleOperations="1" IsCustomEntity="False" Name="Case" />
                             </uibi:BusinessEntity.EntityMetadata>
+                            <uibi:BusinessEntity.Metadata>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID13">
+                                <x:String x:Key="Object">Case</x:String>
+                                <x:String x:Key="FullPath">/Case</x:String>
+                                <x:String x:Key="Method">POST</x:String>
+                                <x:Null x:Key="BaseObject" />
+                              </scg:Dictionary>
+                            </uibi:BusinessEntity.Metadata>
                             <uibi:BusinessEntity.SelectedFields>
                               <scg:List x:TypeArguments="uibi:EntityField" Capacity="7">
-                                <x:Reference>__ReferenceID7</x:Reference>
-                                <x:Reference>__ReferenceID8</x:Reference>
+                                <x:Reference>__ReferenceID6</x:Reference>
                                 <x:Reference>__ReferenceID9</x:Reference>
+                                <x:Reference>__ReferenceID12</x:Reference>
+                                <x:Reference>__ReferenceID8</x:Reference>
                                 <x:Reference>__ReferenceID10</x:Reference>
                                 <x:Reference>__ReferenceID11</x:Reference>
-                                <x:Reference>__ReferenceID12</x:Reference>
+                                <x:Reference>__ReferenceID7</x:Reference>
                               </scg:List>
                             </uibi:BusinessEntity.SelectedFields>
                             <uibi:BusinessEntity.TelemetryProperties>
@@ -562,31 +500,96 @@
                           </uiisi:ConnectionParameters>
                         </usia:InsertRecord.DesignConnectionRequest>
                         <usia:InsertRecord.SelectedFields>
-                          <scg:List x:TypeArguments="uibi:EntityField" Capacity="6">
-                            <x:Reference>__ReferenceID7</x:Reference>
-                            <x:Reference>__ReferenceID8</x:Reference>
-                            <x:Reference>__ReferenceID9</x:Reference>
-                            <x:Reference>__ReferenceID10</x:Reference>
-                            <x:Reference>__ReferenceID11</x:Reference>
-                            <x:Reference>__ReferenceID12</x:Reference>
+                          <scg:List x:TypeArguments="uibi:EntityField" Capacity="7">
+                            <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentValue="{x:Reference __ReferenceID1}" Value="{x:Reference __ReferenceID0}" x:Name="__ReferenceID6" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="Case ID" DisplayName="Case ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="True" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Id" ShouldFilterOnChange="False">
+                              <uiisi:OperationEntityField.OutArgumentValue>
+                                <OutArgument x:TypeArguments="x:String" x:Name="__ReferenceID1">
+                                  <CSharpReference x:TypeArguments="x:String" x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="CSharpReference`1_66">caseId</CSharpReference>
+                                </OutArgument>
+                              </uiisi:OperationEntityField.OutArgumentValue>
+                            </uiisi:OperationEntityField>
+                            <uiisi:OperationEntityField x:TypeArguments="x:String" InArgumentValue="{x:Reference __ReferenceID3}" x:Name="__ReferenceID9" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Description" DisplayName="Description" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Description" ShouldFilterOnChange="False">
+                              <uiisi:OperationEntityField.ArgumentValue>
+                                <InArgument x:TypeArguments="x:String" x:Name="__ReferenceID3">
+                                  <x:Reference>__ReferenceID2</x:Reference>
+                                </InArgument>
+                              </uiisi:OperationEntityField.ArgumentValue>
+                              <uiisi:OperationEntityField.Value>
+                                <CSharpValue x:TypeArguments="x:String" x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="CSharpValue`1_174">sub</CSharpValue>
+                              </uiisi:OperationEntityField.Value>
+                            </uiisi:OperationEntityField>
+                            <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID12" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Status" DisplayName="Status" FormDataType="ExpressionTextBox" InArgumentValue="New" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Status" ShouldFilterOnChange="False">
+                              <uiisi:OperationEntityField.ArgumentValue>
+                                <InArgument x:TypeArguments="x:String">New</InArgument>
+                              </uiisi:OperationEntityField.ArgumentValue>
+                              <uiisi:OperationEntityField.EnumValues>
+                                <scg:List x:TypeArguments="x:String" Capacity="4">
+                                  <x:String>New</x:String>
+                                  <x:String>Working</x:String>
+                                  <x:String>Escalated</x:String>
+                                  <x:String>Closed</x:String>
+                                </scg:List>
+                              </uiisi:OperationEntityField.EnumValues>
+                              <uiisi:OperationEntityField.Value>
+                                <Literal x:TypeArguments="x:String">New</Literal>
+                              </uiisi:OperationEntityField.Value>
+                            </uiisi:OperationEntityField>
+                            <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID8" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Company" DisplayName="Company" FormDataType="ExpressionTextBox" InArgumentValue="Clarium.org" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="SuppliedCompany" ShouldFilterOnChange="False">
+                              <uiisi:OperationEntityField.ArgumentValue>
+                                <InArgument x:TypeArguments="x:String">Clarium.org</InArgument>
+                              </uiisi:OperationEntityField.ArgumentValue>
+                              <uiisi:OperationEntityField.Value>
+                                <Literal x:TypeArguments="x:String">Clarium.org</Literal>
+                              </uiisi:OperationEntityField.Value>
+                            </uiisi:OperationEntityField>
+                            <uiisi:OperationEntityField x:TypeArguments="x:String" InArgumentValue="{x:Reference __ReferenceID5}" x:Name="__ReferenceID10" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Email Address" DisplayName="Email Address" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="SuppliedEmail" ShouldFilterOnChange="False">
+                              <uiisi:OperationEntityField.ArgumentValue>
+                                <InArgument x:TypeArguments="x:String" x:Name="__ReferenceID5">
+                                  <x:Reference>__ReferenceID4</x:Reference>
+                                </InArgument>
+                              </uiisi:OperationEntityField.ArgumentValue>
+                              <uiisi:OperationEntityField.Value>
+                                <CSharpValue x:TypeArguments="x:String" x:Name="__ReferenceID4" sap2010:WorkflowViewState.IdRef="CSharpValue`1_175">fix</CSharpValue>
+                              </uiisi:OperationEntityField.Value>
+                            </uiisi:OperationEntityField>
+                            <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID11" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Priority" DisplayName="Priority" FormDataType="ExpressionTextBox" InArgumentValue="Medium" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Priority" ShouldFilterOnChange="False">
+                              <uiisi:OperationEntityField.ArgumentValue>
+                                <InArgument x:TypeArguments="x:String">Medium</InArgument>
+                              </uiisi:OperationEntityField.ArgumentValue>
+                              <uiisi:OperationEntityField.EnumValues>
+                                <scg:List x:TypeArguments="x:String" Capacity="3">
+                                  <x:String>High</x:String>
+                                  <x:String>Medium</x:String>
+                                  <x:String>Low</x:String>
+                                </scg:List>
+                              </uiisi:OperationEntityField.EnumValues>
+                              <uiisi:OperationEntityField.Value>
+                                <Literal x:TypeArguments="x:String">Medium</Literal>
+                              </uiisi:OperationEntityField.Value>
+                            </uiisi:OperationEntityField>
+                            <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID7" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Case Type" DisplayName="Case Type" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Type" ShouldFilterOnChange="False">
+                              <uiisi:OperationEntityField.EnumValues>
+                                <scg:List x:TypeArguments="x:String" Capacity="5">
+                                  <x:String>Mechanical</x:String>
+                                  <x:String>Electrical</x:String>
+                                  <x:String>Electronic</x:String>
+                                  <x:String>Structural</x:String>
+                                  <x:String>Other</x:String>
+                                </scg:List>
+                              </uiisi:OperationEntityField.EnumValues>
+                            </uiisi:OperationEntityField>
                           </scg:List>
                         </usia:InsertRecord.SelectedFields>
                         <usia:InsertRecord.TelemetryProperties>
                           <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
                         </usia:InsertRecord.TelemetryProperties>
                       </usia:InsertRecord>
-                      <usia:UpdateRecord ActivityInstanceId="b419328c-e9cc-4383-a8b8-a94265a26450" BindingsVersion="2.1" BusinessEntityName="Case" ConfiguredBusinessEntity="" ConnectionId="10ed0ce1-cb1f-4429-8e21-d1932902f56e" Connector="uipath-salesforce-sfdc" CrudOperation="Update" DesignConnectionEnabled="True" DisplayName="Changing it to working upon status" sap:VirtualizedContainerService.HintSize="530,236" sap2010:WorkflowViewState.IdRef="UpdateRecord_5">
+                      <usia:UpdateRecord ActivityInstanceId="b419328c-e9cc-4383-a8b8-a94265a26450" BindingsVersion="2.1" BusinessEntityName="Case" ConfiguredBusinessEntity="" ConnectionId="10ed0ce1-cb1f-4429-8e21-d1932902f56e" Connector="uipath-salesforce-sfdc" CrudOperation="Update" DesignConnectionEnabled="True" DisplayName="Changing it to working upon status" sap:VirtualizedContainerService.HintSize="606,236" sap2010:WorkflowViewState.IdRef="UpdateRecord_5">
                         <usia:UpdateRecord.BusinessEntity>
-                          <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID15}" Name="Case">
+                          <uibi:BusinessEntity Name="Case">
                             <uibi:BusinessEntity.AllFields>
                               <scg:List x:TypeArguments="uibi:EntityField" Capacity="24">
-                                <uiisi:OperationEntityField x:TypeArguments="x:String" InArgumentValue="{x:Reference __ReferenceID14}" Value="{x:Reference __ReferenceID13}" x:Name="__ReferenceID16" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The case id" DisplayName="Case id" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="True" IsMandatory="True" IsParameter="True" IsPriority="False" IsSelected="False" Location="Path" Name="caseId" ShouldFilterOnChange="False">
-                                  <uiisi:OperationEntityField.ArgumentValue>
-                                    <InArgument x:TypeArguments="x:String" x:Name="__ReferenceID14">
-                                      <CSharpValue x:TypeArguments="x:String" x:Name="__ReferenceID13" sap2010:WorkflowViewState.IdRef="CSharpValue`1_176">caseId</CSharpValue>
-                                    </InArgument>
-                                  </uiisi:OperationEntityField.ArgumentValue>
-                                </uiisi:OperationEntityField>
+                                <x:Reference>__ReferenceID16</x:Reference>
                                 <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Account ID" DisplayName="Account ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="AccountId" ShouldFilterOnChange="False" />
                                 <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Asset ID" DisplayName="Asset ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="AssetId" ShouldFilterOnChange="False" />
                                 <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Case Origin" DisplayName="Case Origin" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Origin" ShouldFilterOnChange="False">
@@ -674,37 +677,21 @@
                                     </scg:List>
                                   </uiisi:OperationEntityField.EnumValues>
                                 </uiisi:OperationEntityField>
-                                <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID17" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Status" DisplayName="Status" FormDataType="ExpressionTextBox" InArgumentValue="Working" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Status" ShouldFilterOnChange="False">
-                                  <uiisi:OperationEntityField.ArgumentValue>
-                                    <InArgument x:TypeArguments="x:String">Working</InArgument>
-                                  </uiisi:OperationEntityField.ArgumentValue>
-                                  <uiisi:OperationEntityField.EnumValues>
-                                    <scg:List x:TypeArguments="x:String" Capacity="4">
-                                      <x:String>New</x:String>
-                                      <x:String>Working</x:String>
-                                      <x:String>Escalated</x:String>
-                                      <x:String>Closed</x:String>
-                                    </scg:List>
-                                  </uiisi:OperationEntityField.EnumValues>
-                                  <uiisi:OperationEntityField.Value>
-                                    <Literal x:TypeArguments="x:String">Working</Literal>
-                                  </uiisi:OperationEntityField.Value>
-                                </uiisi:OperationEntityField>
+                                <x:Reference>__ReferenceID17</x:Reference>
                                 <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Subject" DisplayName="Subject" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Subject" ShouldFilterOnChange="False" />
                               </scg:List>
                             </uibi:BusinessEntity.AllFields>
                             <uibi:BusinessEntity.EntityMetadata>
-                              <uibi:EntityMetadata DisplayName="Case" EligibleOperations="4" IsCustomEntity="False" Name="Case">
-                                <uibi:EntityMetadata.Metadata>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID15">
-                                    <x:String x:Key="Object">Case</x:String>
-                                    <x:String x:Key="FullPath">/Case/{caseId}</x:String>
-                                    <x:String x:Key="Method">PATCH</x:String>
-                                    <x:Null x:Key="BaseObject" />
-                                  </scg:Dictionary>
-                                </uibi:EntityMetadata.Metadata>
-                              </uibi:EntityMetadata>
+                              <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID18}" DisplayName="Case" EligibleOperations="4" IsCustomEntity="False" Name="Case" />
                             </uibi:BusinessEntity.EntityMetadata>
+                            <uibi:BusinessEntity.Metadata>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID18">
+                                <x:String x:Key="Object">Case</x:String>
+                                <x:String x:Key="FullPath">/Case/{caseId}</x:String>
+                                <x:String x:Key="Method">PATCH</x:String>
+                                <x:Null x:Key="BaseObject" />
+                              </scg:Dictionary>
+                            </uibi:BusinessEntity.Metadata>
                             <uibi:BusinessEntity.SelectedFields>
                               <scg:List x:TypeArguments="uibi:EntityField" Capacity="2">
                                 <x:Reference>__ReferenceID16</x:Reference>
@@ -728,332 +715,527 @@
                         </usia:UpdateRecord.DesignConnectionRequest>
                         <usia:UpdateRecord.SelectedFields>
                           <scg:List x:TypeArguments="uibi:EntityField" Capacity="2">
-                            <x:Reference>__ReferenceID16</x:Reference>
-                            <x:Reference>__ReferenceID17</x:Reference>
+                            <uiisi:OperationEntityField x:TypeArguments="x:String" InArgumentValue="{x:Reference __ReferenceID15}" x:Name="__ReferenceID16" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The case id" DisplayName="Case id" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="True" IsMandatory="True" IsParameter="True" IsPriority="False" IsSelected="False" Location="Path" Name="caseId" ShouldFilterOnChange="False">
+                              <uiisi:OperationEntityField.ArgumentValue>
+                                <InArgument x:TypeArguments="x:String" x:Name="__ReferenceID15">
+                                  <x:Reference>__ReferenceID14</x:Reference>
+                                </InArgument>
+                              </uiisi:OperationEntityField.ArgumentValue>
+                              <uiisi:OperationEntityField.Value>
+                                <CSharpValue x:TypeArguments="x:String" x:Name="__ReferenceID14" sap2010:WorkflowViewState.IdRef="CSharpValue`1_176">caseId</CSharpValue>
+                              </uiisi:OperationEntityField.Value>
+                            </uiisi:OperationEntityField>
+                            <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID17" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Status" DisplayName="Status" FormDataType="ExpressionTextBox" InArgumentValue="Working" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Status" ShouldFilterOnChange="False">
+                              <uiisi:OperationEntityField.ArgumentValue>
+                                <InArgument x:TypeArguments="x:String">Working</InArgument>
+                              </uiisi:OperationEntityField.ArgumentValue>
+                              <uiisi:OperationEntityField.EnumValues>
+                                <scg:List x:TypeArguments="x:String" Capacity="4">
+                                  <x:String>New</x:String>
+                                  <x:String>Working</x:String>
+                                  <x:String>Escalated</x:String>
+                                  <x:String>Closed</x:String>
+                                </scg:List>
+                              </uiisi:OperationEntityField.EnumValues>
+                              <uiisi:OperationEntityField.Value>
+                                <Literal x:TypeArguments="x:String">Working</Literal>
+                              </uiisi:OperationEntityField.Value>
+                            </uiisi:OperationEntityField>
                           </scg:List>
                         </usia:UpdateRecord.SelectedFields>
                         <usia:UpdateRecord.TelemetryProperties>
                           <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
                         </usia:UpdateRecord.TelemetryProperties>
                       </usia:UpdateRecord>
-                      <umab:ExchangeApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" SharedMailbox="{x:Null}" Account="SalateShalinthC@clarium.tech" DisplayName="Preping Outlook to send the emails" EmailAddress="SalateShalinthC@clarium.tech" sap:VirtualizedContainerService.HintSize="530,1005" sap2010:WorkflowViewState.IdRef="ExchangeApplicationCard_3" UseConnectionService="False">
-                        <umab:ExchangeApplicationCard.ApplicationId>
+                      <ui:FileExistsX DisplayName="File Exists" sap:VirtualizedContainerService.HintSize="606,133" sap2010:WorkflowViewState.IdRef="FileExistsX_1">
+                        <ui:FileExistsX.Exists>
+                          <OutArgument x:TypeArguments="x:Boolean">
+                            <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_73">exists</CSharpReference>
+                          </OutArgument>
+                        </ui:FileExistsX.Exists>
+                        <ui:FileExistsX.Path>
                           <InArgument x:TypeArguments="x:String">
-                            <Literal x:TypeArguments="x:String" Value="" />
+                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_191">"C:\\Users\\SalateShalinthC\\Downloads\\"+final</CSharpValue>
                           </InArgument>
-                        </umab:ExchangeApplicationCard.ApplicationId>
-                        <umab:ExchangeApplicationCard.Body>
-                          <ActivityAction x:TypeArguments="um:IMailQuickHandle">
-                            <ActivityAction.Argument>
-                              <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Exchange" />
-                            </ActivityAction.Argument>
-                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,783" sap2010:WorkflowViewState.IdRef="Sequence_30">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" BodyType="Text" DisplayName="Sending mail to the desired user with the file they requested" sap:VirtualizedContainerService.HintSize="434,396" sap2010:WorkflowViewState.IdRef="SendMailX_3" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" UseDocumentAsBody="False">
-                                <umab:SendMailX.Account>
-                                  <InArgument x:TypeArguments="um:IMailQuickHandle">
-                                    <CSharpValue x:TypeArguments="um:IMailQuickHandle" sap2010:WorkflowViewState.IdRef="CSharpValue`1_177">Exchange</CSharpValue>
-                                  </InArgument>
-                                </umab:SendMailX.Account>
-                                <umab:SendMailX.Files>
-                                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
-                                    <InArgument x:TypeArguments="x:String">
-                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_180">"C:\\Users\\SalateShalinthC\\Downloads\\"+final</CSharpValue>
-                                    </InArgument>
-                                  </scg:List>
-                                </umab:SendMailX.Files>
-                                <umab:SendMailX.HtmlBodyFromFile>
-                                  <umabh:HtmlContentArgument FilePath="{x:Null}">
-                                    <umabh:HtmlContentArgument.RuntimeImages>
-                                      <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                                    </umabh:HtmlContentArgument.RuntimeImages>
-                                    <umabh:HtmlContentArgument.ValueMappings>
-                                      <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
-                                    </umabh:HtmlContentArgument.ValueMappings>
-                                  </umabh:HtmlContentArgument>
-                                </umab:SendMailX.HtmlBodyFromFile>
-                                <umab:SendMailX.Subject>
-                                  <InArgument x:TypeArguments="x:String">
-                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_179">sub</CSharpValue>
-                                  </InArgument>
-                                </umab:SendMailX.Subject>
-                                <umab:SendMailX.To>
-                                  <InArgument x:TypeArguments="x:String">
-                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_178">fix</CSharpValue>
-                                  </InArgument>
-                                </umab:SendMailX.To>
-                              </umab:SendMailX>
-                              <usia:UpdateRecord ActivityInstanceId="db3ec127-4295-465a-8ee3-08eea817c505" BindingsVersion="2.1" BusinessEntityName="Case" ConfiguredBusinessEntity="" ConnectionId="10ed0ce1-cb1f-4429-8e21-d1932902f56e" Connector="uipath-salesforce-sfdc" CrudOperation="Update" DesignConnectionEnabled="True" DisplayName="Closing the Ticket" sap:VirtualizedContainerService.HintSize="434,236" sap2010:WorkflowViewState.IdRef="UpdateRecord_6">
-                                <usia:UpdateRecord.BusinessEntity>
-                                  <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID20}" Name="Case">
-                                    <uibi:BusinessEntity.AllFields>
-                                      <scg:List x:TypeArguments="uibi:EntityField" Capacity="24">
-                                        <uiisi:OperationEntityField x:TypeArguments="x:String" InArgumentValue="{x:Reference __ReferenceID19}" Value="{x:Reference __ReferenceID18}" x:Name="__ReferenceID21" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The case id" DisplayName="Case id" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="True" IsMandatory="True" IsParameter="True" IsPriority="False" IsSelected="False" Location="Path" Name="caseId" ShouldFilterOnChange="False">
-                                          <uiisi:OperationEntityField.ArgumentValue>
-                                            <InArgument x:TypeArguments="x:String" x:Name="__ReferenceID19">
-                                              <CSharpValue x:TypeArguments="x:String" x:Name="__ReferenceID18" sap2010:WorkflowViewState.IdRef="CSharpValue`1_181">caseId</CSharpValue>
-                                            </InArgument>
-                                          </uiisi:OperationEntityField.ArgumentValue>
-                                        </uiisi:OperationEntityField>
-                                        <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Account ID" DisplayName="Account ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="AccountId" ShouldFilterOnChange="False" />
-                                        <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Asset ID" DisplayName="Asset ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="AssetId" ShouldFilterOnChange="False" />
-                                        <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Case Origin" DisplayName="Case Origin" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Origin" ShouldFilterOnChange="False">
-                                          <uiisi:OperationEntityField.EnumValues>
-                                            <scg:List x:TypeArguments="x:String" Capacity="3">
-                                              <x:String>Phone</x:String>
-                                              <x:String>Email</x:String>
-                                              <x:String>Web</x:String>
-                                            </scg:List>
-                                          </uiisi:OperationEntityField.EnumValues>
-                                        </uiisi:OperationEntityField>
-                                        <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Case Reason" DisplayName="Case Reason" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Reason" ShouldFilterOnChange="False">
-                                          <uiisi:OperationEntityField.EnumValues>
-                                            <scg:List x:TypeArguments="x:String" Capacity="7">
-                                              <x:String>Installation</x:String>
-                                              <x:String>Equipment Complexity</x:String>
-                                              <x:String>Performance</x:String>
-                                              <x:String>Breakdown</x:String>
-                                              <x:String>Equipment Design</x:String>
-                                              <x:String>Feedback</x:String>
-                                              <x:String>Other</x:String>
-                                            </scg:List>
-                                          </uiisi:OperationEntityField.EnumValues>
-                                        </uiisi:OperationEntityField>
-                                        <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Case Source ID" DisplayName="Case Source ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="SourceId" ShouldFilterOnChange="False" />
-                                        <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Case Type" DisplayName="Case Type" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Type" ShouldFilterOnChange="False">
-                                          <uiisi:OperationEntityField.EnumValues>
-                                            <scg:List x:TypeArguments="x:String" Capacity="5">
-                                              <x:String>Mechanical</x:String>
-                                              <x:String>Electrical</x:String>
-                                              <x:String>Electronic</x:String>
-                                              <x:String>Structural</x:String>
-                                              <x:String>Other</x:String>
-                                            </scg:List>
-                                          </uiisi:OperationEntityField.EnumValues>
-                                        </uiisi:OperationEntityField>
-                                        <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Company" DisplayName="Company" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="SuppliedCompany" ShouldFilterOnChange="False" />
-                                        <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Contact ID" DisplayName="Contact ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="ContactId" ShouldFilterOnChange="False" />
-                                        <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Description" DisplayName="Description" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Description" ShouldFilterOnChange="False" />
-                                        <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Email Address" DisplayName="Email Address" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="SuppliedEmail" ShouldFilterOnChange="False" />
-                                        <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Engineering Req Number" DisplayName="Engineering Req Number" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="True" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="EngineeringReqNumber__c" ShouldFilterOnChange="False" />
-                                        <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" DataType="Boolean" Description="Escalated" DisplayName="Escalated" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="IsEscalated" ShouldFilterOnChange="False" />
-                                        <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Internal Comments" DisplayName="Internal Comments" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Comments" ShouldFilterOnChange="False" />
-                                        <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Name" DisplayName="Name" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="SuppliedName" ShouldFilterOnChange="False" />
-                                        <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Owner ID" DisplayName="Owner ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="OwnerId" ShouldFilterOnChange="False" />
-                                        <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Parent Case ID" DisplayName="Parent Case ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="ParentId" ShouldFilterOnChange="False" />
-                                        <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Phone" DisplayName="Phone" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="SuppliedPhone" ShouldFilterOnChange="False" />
-                                        <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Potential Liability" DisplayName="Potential Liability" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="True" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="PotentialLiability__c" ShouldFilterOnChange="False">
-                                          <uiisi:OperationEntityField.EnumValues>
-                                            <scg:List x:TypeArguments="x:String" Capacity="2">
-                                              <x:String>No</x:String>
-                                              <x:String>Yes</x:String>
-                                            </scg:List>
-                                          </uiisi:OperationEntityField.EnumValues>
-                                        </uiisi:OperationEntityField>
-                                        <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Priority" DisplayName="Priority" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Priority" ShouldFilterOnChange="False">
-                                          <uiisi:OperationEntityField.EnumValues>
-                                            <scg:List x:TypeArguments="x:String" Capacity="3">
-                                              <x:String>High</x:String>
-                                              <x:String>Medium</x:String>
-                                              <x:String>Low</x:String>
-                                            </scg:List>
-                                          </uiisi:OperationEntityField.EnumValues>
-                                        </uiisi:OperationEntityField>
-                                        <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Product" DisplayName="Product" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="True" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Product__c" ShouldFilterOnChange="False">
-                                          <uiisi:OperationEntityField.EnumValues>
-                                            <scg:List x:TypeArguments="x:String" Capacity="9">
-                                              <x:String>GC1040</x:String>
-                                              <x:String>GC1060</x:String>
-                                              <x:String>GC3020</x:String>
-                                              <x:String>GC3040</x:String>
-                                              <x:String>GC3060</x:String>
-                                              <x:String>GC5020</x:String>
-                                              <x:String>GC5040</x:String>
-                                              <x:String>GC5060</x:String>
-                                              <x:String>GC1020</x:String>
-                                            </scg:List>
-                                          </uiisi:OperationEntityField.EnumValues>
-                                        </uiisi:OperationEntityField>
-                                        <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="SLA Violation" DisplayName="SLA Violation" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="True" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="SLAViolation__c" ShouldFilterOnChange="False">
-                                          <uiisi:OperationEntityField.EnumValues>
-                                            <scg:List x:TypeArguments="x:String" Capacity="2">
-                                              <x:String>No</x:String>
-                                              <x:String>Yes</x:String>
-                                            </scg:List>
-                                          </uiisi:OperationEntityField.EnumValues>
-                                        </uiisi:OperationEntityField>
-                                        <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID22" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Status" DisplayName="Status" FormDataType="ExpressionTextBox" InArgumentValue="Closed" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Status" ShouldFilterOnChange="False">
-                                          <uiisi:OperationEntityField.ArgumentValue>
-                                            <InArgument x:TypeArguments="x:String">Closed</InArgument>
-                                          </uiisi:OperationEntityField.ArgumentValue>
-                                          <uiisi:OperationEntityField.EnumValues>
-                                            <scg:List x:TypeArguments="x:String" Capacity="4">
-                                              <x:String>New</x:String>
-                                              <x:String>Working</x:String>
-                                              <x:String>Escalated</x:String>
-                                              <x:String>Closed</x:String>
-                                            </scg:List>
-                                          </uiisi:OperationEntityField.EnumValues>
-                                          <uiisi:OperationEntityField.Value>
-                                            <Literal x:TypeArguments="x:String">Closed</Literal>
-                                          </uiisi:OperationEntityField.Value>
-                                        </uiisi:OperationEntityField>
-                                        <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Subject" DisplayName="Subject" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Subject" ShouldFilterOnChange="False" />
-                                      </scg:List>
-                                    </uibi:BusinessEntity.AllFields>
-                                    <uibi:BusinessEntity.EntityMetadata>
-                                      <uibi:EntityMetadata DisplayName="Case" EligibleOperations="4" IsCustomEntity="False" Name="Case">
-                                        <uibi:EntityMetadata.Metadata>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID20">
-                                            <x:String x:Key="Object">Case</x:String>
-                                            <x:String x:Key="FullPath">/Case/{caseId}</x:String>
-                                            <x:String x:Key="Method">PATCH</x:String>
-                                            <x:Null x:Key="BaseObject" />
-                                          </scg:Dictionary>
-                                        </uibi:EntityMetadata.Metadata>
-                                      </uibi:EntityMetadata>
-                                    </uibi:BusinessEntity.EntityMetadata>
-                                    <uibi:BusinessEntity.SelectedFields>
-                                      <scg:List x:TypeArguments="uibi:EntityField" Capacity="2">
-                                        <x:Reference>__ReferenceID21</x:Reference>
-                                        <x:Reference>__ReferenceID22</x:Reference>
-                                      </scg:List>
-                                    </uibi:BusinessEntity.SelectedFields>
-                                    <uibi:BusinessEntity.TelemetryProperties>
-                                      <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
-                                    </uibi:BusinessEntity.TelemetryProperties>
-                                  </uibi:BusinessEntity>
-                                </usia:UpdateRecord.BusinessEntity>
-                                <usia:UpdateRecord.CachedLookupValues>
-                                  <scg:Dictionary x:TypeArguments="x:String, scg:List(uiisi:LookupValue)" />
-                                </usia:UpdateRecord.CachedLookupValues>
-                                <usia:UpdateRecord.DesignConnectionRequest>
-                                  <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="10ed0ce1-cb1f-4429-8e21-d1932902f56e" ConnectionName="arvindhs@clarim.tech" ConnectorKey="uipath-salesforce-sfdc">
-                                    <uiisi:ConnectionParameters.TelemetryInfo>
-                                      <uiisi:TelemetryInfo ActivityPack="UiPath.Salesforce.IntegrationService.Activities" ActivityPackVersion="6.1.0" Source="StudioDesktop" />
-                                    </uiisi:ConnectionParameters.TelemetryInfo>
-                                  </uiisi:ConnectionParameters>
-                                </usia:UpdateRecord.DesignConnectionRequest>
-                                <usia:UpdateRecord.SelectedFields>
-                                  <scg:List x:TypeArguments="uibi:EntityField" Capacity="2">
-                                    <x:Reference>__ReferenceID21</x:Reference>
-                                    <x:Reference>__ReferenceID22</x:Reference>
-                                  </scg:List>
-                                </usia:UpdateRecord.SelectedFields>
-                                <usia:UpdateRecord.TelemetryProperties>
-                                  <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
-                                </usia:UpdateRecord.TelemetryProperties>
-                              </usia:UpdateRecord>
-                            </Sequence>
-                          </ActivityAction>
-                        </umab:ExchangeApplicationCard.Body>
-                        <umab:ExchangeApplicationCard.TenantId>
-                          <InArgument x:TypeArguments="x:String">
-                            <Literal x:TypeArguments="x:String" Value="" />
-                          </InArgument>
-                        </umab:ExchangeApplicationCard.TenantId>
-                      </umab:ExchangeApplicationCard>
-                      <If sap:VirtualizedContainerService.HintSize="530,434" sap2010:WorkflowViewState.IdRef="If_7">
+                        </ui:FileExistsX.Path>
+                      </ui:FileExistsX>
+                      <If sap:VirtualizedContainerService.HintSize="606,2355" sap2010:WorkflowViewState.IdRef="If_9">
                         <If.Condition>
                           <InArgument x:TypeArguments="x:Boolean">
-                            <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_182">count==1</CSharpValue>
+                            <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_192">exists==true</CSharpValue>
                           </InArgument>
                         </If.Condition>
                         <If.Then>
-                          <Sequence sap:VirtualizedContainerService.HintSize="465,251" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                          <Sequence sap:VirtualizedContainerService.HintSize="572,1096" sap2010:WorkflowViewState.IdRef="Sequence_36">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="423,163" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
-                              <ui:MultipleAssign.AssignOperations>
-                                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_31">
-                                    <ui:AssignOperation.To>
-                                      <OutArgument x:TypeArguments="s:String[]">
-                                        <CSharpReference x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_67">listofcases</CSharpReference>
-                                      </OutArgument>
-                                    </ui:AssignOperation.To>
-                                    <ui:AssignOperation.Value>
-                                      <InArgument x:TypeArguments="s:String[]">
-                                        <CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_183">new string[100]</CSharpValue>
-                                      </InArgument>
-                                    </ui:AssignOperation.Value>
-                                  </ui:AssignOperation>
-                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_32">
-                                    <ui:AssignOperation.To>
-                                      <OutArgument x:TypeArguments="s:String[]">
-                                        <CSharpReference x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_68">sub1</CSharpReference>
-                                      </OutArgument>
-                                    </ui:AssignOperation.To>
-                                    <ui:AssignOperation.Value>
-                                      <InArgument x:TypeArguments="s:String[]">
-                                        <CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_184">new string[100]</CSharpValue>
-                                      </InArgument>
-                                    </ui:AssignOperation.Value>
-                                  </ui:AssignOperation>
-                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_33">
-                                    <ui:AssignOperation.To>
-                                      <OutArgument x:TypeArguments="s:String[]">
-                                        <CSharpReference x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_69">From</CSharpReference>
-                                      </OutArgument>
-                                    </ui:AssignOperation.To>
-                                    <ui:AssignOperation.Value>
-                                      <InArgument x:TypeArguments="s:String[]">
-                                        <CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_185">new string[100]</CSharpValue>
-                                      </InArgument>
-                                    </ui:AssignOperation.Value>
-                                  </ui:AssignOperation>
-                                </scg:List>
-                              </ui:MultipleAssign.AssignOperations>
-                            </ui:MultipleAssign>
+                            <umab:ExchangeApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" SharedMailbox="{x:Null}" Account="SalateShalinthC@clarium.tech" DisplayName="Preping Outlook to send the emails" EmailAddress="SalateShalinthC@clarium.tech" sap:VirtualizedContainerService.HintSize="530,1008" sap2010:WorkflowViewState.IdRef="ExchangeApplicationCard_4" UseConnectionService="False">
+                              <umab:ExchangeApplicationCard.ApplicationId>
+                                <InArgument x:TypeArguments="x:String">
+                                  <Literal x:TypeArguments="x:String" Value="" />
+                                </InArgument>
+                              </umab:ExchangeApplicationCard.ApplicationId>
+                              <umab:ExchangeApplicationCard.Body>
+                                <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Exchange" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,784" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" BodyType="Text" DisplayName="Sending mail to the desired user with the file they requested" sap:VirtualizedContainerService.HintSize="434,396" sap2010:WorkflowViewState.IdRef="SendMailX_4" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" UseDocumentAsBody="False">
+                                      <umab:SendMailX.Account>
+                                        <InArgument x:TypeArguments="um:IMailQuickHandle">
+                                          <CSharpValue x:TypeArguments="um:IMailQuickHandle" sap2010:WorkflowViewState.IdRef="CSharpValue`1_193">Exchange</CSharpValue>
+                                        </InArgument>
+                                      </umab:SendMailX.Account>
+                                      <umab:SendMailX.Body>
+                                        <InArgument x:TypeArguments="x:String">
+                                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_197">"We have attached the file '"+final+"' as per your request"</CSharpValue>
+                                        </InArgument>
+                                      </umab:SendMailX.Body>
+                                      <umab:SendMailX.Files>
+                                        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
+                                          <InArgument x:TypeArguments="x:String">
+                                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_196">"C:\\Users\\SalateShalinthC\\Downloads\\"+final</CSharpValue>
+                                          </InArgument>
+                                        </scg:List>
+                                      </umab:SendMailX.Files>
+                                      <umab:SendMailX.HtmlBodyFromFile>
+                                        <umabh:HtmlContentArgument FilePath="{x:Null}">
+                                          <umabh:HtmlContentArgument.RuntimeImages>
+                                            <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                          </umabh:HtmlContentArgument.RuntimeImages>
+                                          <umabh:HtmlContentArgument.ValueMappings>
+                                            <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
+                                          </umabh:HtmlContentArgument.ValueMappings>
+                                        </umabh:HtmlContentArgument>
+                                      </umab:SendMailX.HtmlBodyFromFile>
+                                      <umab:SendMailX.Subject>
+                                        <InArgument x:TypeArguments="x:String">
+                                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_195">sub</CSharpValue>
+                                        </InArgument>
+                                      </umab:SendMailX.Subject>
+                                      <umab:SendMailX.To>
+                                        <InArgument x:TypeArguments="x:String">
+                                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_194">fix</CSharpValue>
+                                        </InArgument>
+                                      </umab:SendMailX.To>
+                                    </umab:SendMailX>
+                                    <usia:UpdateRecord Language="{x:Null}" ActivityInstanceId="db3ec127-4295-465a-8ee3-08eea817c505" BindingsVersion="2.1" BusinessEntityName="Case" ConfiguredBusinessEntity="" ConnectionId="10ed0ce1-cb1f-4429-8e21-d1932902f56e" Connector="uipath-salesforce-sfdc" CrudOperation="Update" DesignConnectionEnabled="True" DisplayName="Closing the Ticket" sap:VirtualizedContainerService.HintSize="434,237" sap2010:WorkflowViewState.IdRef="UpdateRecord_7">
+                                      <usia:UpdateRecord.BusinessEntity>
+                                        <uibi:BusinessEntity Name="Case">
+                                          <uibi:BusinessEntity.AllFields>
+                                            <scg:List x:TypeArguments="uibi:EntityField" Capacity="24">
+                                              <x:Reference>__ReferenceID21</x:Reference>
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Account ID" DisplayName="Account ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="AccountId" ShouldFilterOnChange="False" />
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Asset ID" DisplayName="Asset ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="AssetId" ShouldFilterOnChange="False" />
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Case Origin" DisplayName="Case Origin" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Origin" ShouldFilterOnChange="False">
+                                                <uiisi:OperationEntityField.EnumValues>
+                                                  <scg:List x:TypeArguments="x:String" Capacity="3">
+                                                    <x:String>Phone</x:String>
+                                                    <x:String>Email</x:String>
+                                                    <x:String>Web</x:String>
+                                                  </scg:List>
+                                                </uiisi:OperationEntityField.EnumValues>
+                                              </uiisi:OperationEntityField>
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Case Reason" DisplayName="Case Reason" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Reason" ShouldFilterOnChange="False">
+                                                <uiisi:OperationEntityField.EnumValues>
+                                                  <scg:List x:TypeArguments="x:String" Capacity="7">
+                                                    <x:String>Installation</x:String>
+                                                    <x:String>Equipment Complexity</x:String>
+                                                    <x:String>Performance</x:String>
+                                                    <x:String>Breakdown</x:String>
+                                                    <x:String>Equipment Design</x:String>
+                                                    <x:String>Feedback</x:String>
+                                                    <x:String>Other</x:String>
+                                                  </scg:List>
+                                                </uiisi:OperationEntityField.EnumValues>
+                                              </uiisi:OperationEntityField>
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Case Source ID" DisplayName="Case Source ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="SourceId" ShouldFilterOnChange="False" />
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Case Type" DisplayName="Case Type" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Type" ShouldFilterOnChange="False">
+                                                <uiisi:OperationEntityField.EnumValues>
+                                                  <scg:List x:TypeArguments="x:String" Capacity="5">
+                                                    <x:String>Mechanical</x:String>
+                                                    <x:String>Electrical</x:String>
+                                                    <x:String>Electronic</x:String>
+                                                    <x:String>Structural</x:String>
+                                                    <x:String>Other</x:String>
+                                                  </scg:List>
+                                                </uiisi:OperationEntityField.EnumValues>
+                                              </uiisi:OperationEntityField>
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Company" DisplayName="Company" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="SuppliedCompany" ShouldFilterOnChange="False" />
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Contact ID" DisplayName="Contact ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="ContactId" ShouldFilterOnChange="False" />
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Description" DisplayName="Description" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Description" ShouldFilterOnChange="False" />
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Email Address" DisplayName="Email Address" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="SuppliedEmail" ShouldFilterOnChange="False" />
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Engineering Req Number" DisplayName="Engineering Req Number" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="True" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="EngineeringReqNumber__c" ShouldFilterOnChange="False" />
+                                              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" DataType="Boolean" Description="Escalated" DisplayName="Escalated" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="IsEscalated" ShouldFilterOnChange="False" />
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Internal Comments" DisplayName="Internal Comments" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Comments" ShouldFilterOnChange="False" />
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Name" DisplayName="Name" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="SuppliedName" ShouldFilterOnChange="False" />
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Owner ID" DisplayName="Owner ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="OwnerId" ShouldFilterOnChange="False" />
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Parent Case ID" DisplayName="Parent Case ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="ParentId" ShouldFilterOnChange="False" />
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Phone" DisplayName="Phone" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="SuppliedPhone" ShouldFilterOnChange="False" />
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Potential Liability" DisplayName="Potential Liability" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="True" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="PotentialLiability__c" ShouldFilterOnChange="False">
+                                                <uiisi:OperationEntityField.EnumValues>
+                                                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                                                    <x:String>No</x:String>
+                                                    <x:String>Yes</x:String>
+                                                  </scg:List>
+                                                </uiisi:OperationEntityField.EnumValues>
+                                              </uiisi:OperationEntityField>
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Priority" DisplayName="Priority" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Priority" ShouldFilterOnChange="False">
+                                                <uiisi:OperationEntityField.EnumValues>
+                                                  <scg:List x:TypeArguments="x:String" Capacity="3">
+                                                    <x:String>High</x:String>
+                                                    <x:String>Medium</x:String>
+                                                    <x:String>Low</x:String>
+                                                  </scg:List>
+                                                </uiisi:OperationEntityField.EnumValues>
+                                              </uiisi:OperationEntityField>
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Product" DisplayName="Product" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="True" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Product__c" ShouldFilterOnChange="False">
+                                                <uiisi:OperationEntityField.EnumValues>
+                                                  <scg:List x:TypeArguments="x:String" Capacity="9">
+                                                    <x:String>GC1040</x:String>
+                                                    <x:String>GC1060</x:String>
+                                                    <x:String>GC3020</x:String>
+                                                    <x:String>GC3040</x:String>
+                                                    <x:String>GC3060</x:String>
+                                                    <x:String>GC5020</x:String>
+                                                    <x:String>GC5040</x:String>
+                                                    <x:String>GC5060</x:String>
+                                                    <x:String>GC1020</x:String>
+                                                  </scg:List>
+                                                </uiisi:OperationEntityField.EnumValues>
+                                              </uiisi:OperationEntityField>
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="SLA Violation" DisplayName="SLA Violation" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="True" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="SLAViolation__c" ShouldFilterOnChange="False">
+                                                <uiisi:OperationEntityField.EnumValues>
+                                                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                                                    <x:String>No</x:String>
+                                                    <x:String>Yes</x:String>
+                                                  </scg:List>
+                                                </uiisi:OperationEntityField.EnumValues>
+                                              </uiisi:OperationEntityField>
+                                              <x:Reference>__ReferenceID22</x:Reference>
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Subject" DisplayName="Subject" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Subject" ShouldFilterOnChange="False" />
+                                            </scg:List>
+                                          </uibi:BusinessEntity.AllFields>
+                                          <uibi:BusinessEntity.EntityMetadata>
+                                            <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID23}" DisplayName="Case" EligibleOperations="4" IsCustomEntity="False" Name="Case" />
+                                          </uibi:BusinessEntity.EntityMetadata>
+                                          <uibi:BusinessEntity.Metadata>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID23">
+                                              <x:String x:Key="Object">Case</x:String>
+                                              <x:String x:Key="FullPath">/Case/{caseId}</x:String>
+                                              <x:String x:Key="Method">PATCH</x:String>
+                                              <x:Null x:Key="BaseObject" />
+                                            </scg:Dictionary>
+                                          </uibi:BusinessEntity.Metadata>
+                                          <uibi:BusinessEntity.SelectedFields>
+                                            <scg:List x:TypeArguments="uibi:EntityField" Capacity="2">
+                                              <x:Reference>__ReferenceID21</x:Reference>
+                                              <x:Reference>__ReferenceID22</x:Reference>
+                                            </scg:List>
+                                          </uibi:BusinessEntity.SelectedFields>
+                                          <uibi:BusinessEntity.TelemetryProperties>
+                                            <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                                          </uibi:BusinessEntity.TelemetryProperties>
+                                        </uibi:BusinessEntity>
+                                      </usia:UpdateRecord.BusinessEntity>
+                                      <usia:UpdateRecord.CachedLookupValues>
+                                        <scg:Dictionary x:TypeArguments="x:String, scg:List(uiisi:LookupValue)" />
+                                      </usia:UpdateRecord.CachedLookupValues>
+                                      <usia:UpdateRecord.DesignConnectionRequest>
+                                        <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="10ed0ce1-cb1f-4429-8e21-d1932902f56e" ConnectionName="arvindhs@clarim.tech" ConnectorKey="uipath-salesforce-sfdc">
+                                          <uiisi:ConnectionParameters.TelemetryInfo>
+                                            <uiisi:TelemetryInfo ActivityPack="UiPath.Salesforce.IntegrationService.Activities" ActivityPackVersion="6.1.0" Source="StudioDesktop" />
+                                          </uiisi:ConnectionParameters.TelemetryInfo>
+                                        </uiisi:ConnectionParameters>
+                                      </usia:UpdateRecord.DesignConnectionRequest>
+                                      <usia:UpdateRecord.SelectedFields>
+                                        <scg:List x:TypeArguments="uibi:EntityField" Capacity="2">
+                                          <uiisi:OperationEntityField x:TypeArguments="x:String" InArgumentValue="{x:Reference __ReferenceID20}" x:Name="__ReferenceID21" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The case id" DisplayName="Case id" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="True" IsMandatory="True" IsParameter="True" IsPriority="False" IsSelected="False" Location="Path" Name="caseId" ShouldFilterOnChange="False">
+                                            <uiisi:OperationEntityField.ArgumentValue>
+                                              <InArgument x:TypeArguments="x:String" x:Name="__ReferenceID20">
+                                                <x:Reference>__ReferenceID19</x:Reference>
+                                              </InArgument>
+                                            </uiisi:OperationEntityField.ArgumentValue>
+                                            <uiisi:OperationEntityField.Value>
+                                              <CSharpValue x:TypeArguments="x:String" x:Name="__ReferenceID19" sap2010:WorkflowViewState.IdRef="CSharpValue`1_198">caseId</CSharpValue>
+                                            </uiisi:OperationEntityField.Value>
+                                          </uiisi:OperationEntityField>
+                                          <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID22" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Status" DisplayName="Status" FormDataType="ExpressionTextBox" InArgumentValue="Closed" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Status" ShouldFilterOnChange="False">
+                                            <uiisi:OperationEntityField.ArgumentValue>
+                                              <InArgument x:TypeArguments="x:String">Closed</InArgument>
+                                            </uiisi:OperationEntityField.ArgumentValue>
+                                            <uiisi:OperationEntityField.EnumValues>
+                                              <scg:List x:TypeArguments="x:String" Capacity="4">
+                                                <x:String>New</x:String>
+                                                <x:String>Working</x:String>
+                                                <x:String>Escalated</x:String>
+                                                <x:String>Closed</x:String>
+                                              </scg:List>
+                                            </uiisi:OperationEntityField.EnumValues>
+                                            <uiisi:OperationEntityField.Value>
+                                              <Literal x:TypeArguments="x:String">Closed</Literal>
+                                            </uiisi:OperationEntityField.Value>
+                                          </uiisi:OperationEntityField>
+                                        </scg:List>
+                                      </usia:UpdateRecord.SelectedFields>
+                                      <usia:UpdateRecord.TelemetryProperties>
+                                        <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                                      </usia:UpdateRecord.TelemetryProperties>
+                                    </usia:UpdateRecord>
+                                  </Sequence>
+                                </ActivityAction>
+                              </umab:ExchangeApplicationCard.Body>
+                              <umab:ExchangeApplicationCard.TenantId>
+                                <InArgument x:TypeArguments="x:String">
+                                  <Literal x:TypeArguments="x:String" Value="" />
+                                </InArgument>
+                              </umab:ExchangeApplicationCard.TenantId>
+                            </umab:ExchangeApplicationCard>
                           </Sequence>
                         </If.Then>
                         <If.Else>
-                          <Sequence sap2010:WorkflowViewState.IdRef="Sequence_32" />
+                          <Sequence sap:VirtualizedContainerService.HintSize="572,1077" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <umab:ExchangeApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" SharedMailbox="{x:Null}" Account="SalateShalinthC@clarium.tech" DisplayName="Preping Outlook to send the emails" EmailAddress="SalateShalinthC@clarium.tech" sap:VirtualizedContainerService.HintSize="530,989" sap2010:WorkflowViewState.IdRef="ExchangeApplicationCard_5" UseConnectionService="False">
+                              <umab:ExchangeApplicationCard.ApplicationId>
+                                <InArgument x:TypeArguments="x:String">
+                                  <Literal x:TypeArguments="x:String" Value="" />
+                                </InArgument>
+                              </umab:ExchangeApplicationCard.ApplicationId>
+                              <umab:ExchangeApplicationCard.Body>
+                                <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Exchange" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,760" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" BodyType="Text" DisplayName="Sending mail to the desired user with the file they requested" sap:VirtualizedContainerService.HintSize="434,372" sap2010:WorkflowViewState.IdRef="SendMailX_5" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" UseDocumentAsBody="False">
+                                      <umab:SendMailX.Account>
+                                        <InArgument x:TypeArguments="um:IMailQuickHandle">
+                                          <CSharpValue x:TypeArguments="um:IMailQuickHandle" sap2010:WorkflowViewState.IdRef="CSharpValue`1_199">Exchange</CSharpValue>
+                                        </InArgument>
+                                      </umab:SendMailX.Account>
+                                      <umab:SendMailX.Body>
+                                        <InArgument x:TypeArguments="x:String">
+                                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_204">"We cannot able to find the file '"+final+"' that you have requested. Please try sending another mail using the standard format"</CSharpValue>
+                                        </InArgument>
+                                      </umab:SendMailX.Body>
+                                      <umab:SendMailX.Files>
+                                        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                      </umab:SendMailX.Files>
+                                      <umab:SendMailX.HtmlBodyFromFile>
+                                        <umabh:HtmlContentArgument FilePath="{x:Null}">
+                                          <umabh:HtmlContentArgument.RuntimeImages>
+                                            <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                          </umabh:HtmlContentArgument.RuntimeImages>
+                                          <umabh:HtmlContentArgument.ValueMappings>
+                                            <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
+                                          </umabh:HtmlContentArgument.ValueMappings>
+                                        </umabh:HtmlContentArgument>
+                                      </umab:SendMailX.HtmlBodyFromFile>
+                                      <umab:SendMailX.Subject>
+                                        <InArgument x:TypeArguments="x:String">
+                                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_201">sub</CSharpValue>
+                                        </InArgument>
+                                      </umab:SendMailX.Subject>
+                                      <umab:SendMailX.To>
+                                        <InArgument x:TypeArguments="x:String">
+                                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_200">fix</CSharpValue>
+                                        </InArgument>
+                                      </umab:SendMailX.To>
+                                    </umab:SendMailX>
+                                    <usia:UpdateRecord Language="{x:Null}" ActivityInstanceId="db3ec127-4295-465a-8ee3-08eea817c505" BindingsVersion="2.1" BusinessEntityName="Case" ConfiguredBusinessEntity="" ConnectionId="10ed0ce1-cb1f-4429-8e21-d1932902f56e" Connector="uipath-salesforce-sfdc" CrudOperation="Update" DesignConnectionEnabled="True" DisplayName="Closing the Ticket" sap:VirtualizedContainerService.HintSize="434,237" sap2010:WorkflowViewState.IdRef="UpdateRecord_9">
+                                      <usia:UpdateRecord.BusinessEntity>
+                                        <uibi:BusinessEntity Name="Case">
+                                          <uibi:BusinessEntity.AllFields>
+                                            <scg:List x:TypeArguments="uibi:EntityField" Capacity="24">
+                                              <x:Reference>__ReferenceID26</x:Reference>
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Account ID" DisplayName="Account ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="AccountId" ShouldFilterOnChange="False" />
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Asset ID" DisplayName="Asset ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="AssetId" ShouldFilterOnChange="False" />
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Case Origin" DisplayName="Case Origin" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Origin" ShouldFilterOnChange="False">
+                                                <uiisi:OperationEntityField.EnumValues>
+                                                  <scg:List x:TypeArguments="x:String" Capacity="3">
+                                                    <x:String>Phone</x:String>
+                                                    <x:String>Email</x:String>
+                                                    <x:String>Web</x:String>
+                                                  </scg:List>
+                                                </uiisi:OperationEntityField.EnumValues>
+                                              </uiisi:OperationEntityField>
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Case Reason" DisplayName="Case Reason" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Reason" ShouldFilterOnChange="False">
+                                                <uiisi:OperationEntityField.EnumValues>
+                                                  <scg:List x:TypeArguments="x:String" Capacity="7">
+                                                    <x:String>Installation</x:String>
+                                                    <x:String>Equipment Complexity</x:String>
+                                                    <x:String>Performance</x:String>
+                                                    <x:String>Breakdown</x:String>
+                                                    <x:String>Equipment Design</x:String>
+                                                    <x:String>Feedback</x:String>
+                                                    <x:String>Other</x:String>
+                                                  </scg:List>
+                                                </uiisi:OperationEntityField.EnumValues>
+                                              </uiisi:OperationEntityField>
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Case Source ID" DisplayName="Case Source ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="SourceId" ShouldFilterOnChange="False" />
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Case Type" DisplayName="Case Type" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Type" ShouldFilterOnChange="False">
+                                                <uiisi:OperationEntityField.EnumValues>
+                                                  <scg:List x:TypeArguments="x:String" Capacity="5">
+                                                    <x:String>Mechanical</x:String>
+                                                    <x:String>Electrical</x:String>
+                                                    <x:String>Electronic</x:String>
+                                                    <x:String>Structural</x:String>
+                                                    <x:String>Other</x:String>
+                                                  </scg:List>
+                                                </uiisi:OperationEntityField.EnumValues>
+                                              </uiisi:OperationEntityField>
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Company" DisplayName="Company" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="SuppliedCompany" ShouldFilterOnChange="False" />
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Contact ID" DisplayName="Contact ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="ContactId" ShouldFilterOnChange="False" />
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Description" DisplayName="Description" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Description" ShouldFilterOnChange="False" />
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Email Address" DisplayName="Email Address" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="SuppliedEmail" ShouldFilterOnChange="False" />
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Engineering Req Number" DisplayName="Engineering Req Number" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="True" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="EngineeringReqNumber__c" ShouldFilterOnChange="False" />
+                                              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" DataType="Boolean" Description="Escalated" DisplayName="Escalated" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="IsEscalated" ShouldFilterOnChange="False" />
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Internal Comments" DisplayName="Internal Comments" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Comments" ShouldFilterOnChange="False" />
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Name" DisplayName="Name" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="SuppliedName" ShouldFilterOnChange="False" />
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Owner ID" DisplayName="Owner ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="OwnerId" ShouldFilterOnChange="False" />
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Parent Case ID" DisplayName="Parent Case ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="ParentId" ShouldFilterOnChange="False" />
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Phone" DisplayName="Phone" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="SuppliedPhone" ShouldFilterOnChange="False" />
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Potential Liability" DisplayName="Potential Liability" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="True" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="PotentialLiability__c" ShouldFilterOnChange="False">
+                                                <uiisi:OperationEntityField.EnumValues>
+                                                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                                                    <x:String>No</x:String>
+                                                    <x:String>Yes</x:String>
+                                                  </scg:List>
+                                                </uiisi:OperationEntityField.EnumValues>
+                                              </uiisi:OperationEntityField>
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Priority" DisplayName="Priority" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Priority" ShouldFilterOnChange="False">
+                                                <uiisi:OperationEntityField.EnumValues>
+                                                  <scg:List x:TypeArguments="x:String" Capacity="3">
+                                                    <x:String>High</x:String>
+                                                    <x:String>Medium</x:String>
+                                                    <x:String>Low</x:String>
+                                                  </scg:List>
+                                                </uiisi:OperationEntityField.EnumValues>
+                                              </uiisi:OperationEntityField>
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Product" DisplayName="Product" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="True" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Product__c" ShouldFilterOnChange="False">
+                                                <uiisi:OperationEntityField.EnumValues>
+                                                  <scg:List x:TypeArguments="x:String" Capacity="9">
+                                                    <x:String>GC1040</x:String>
+                                                    <x:String>GC1060</x:String>
+                                                    <x:String>GC3020</x:String>
+                                                    <x:String>GC3040</x:String>
+                                                    <x:String>GC3060</x:String>
+                                                    <x:String>GC5020</x:String>
+                                                    <x:String>GC5040</x:String>
+                                                    <x:String>GC5060</x:String>
+                                                    <x:String>GC1020</x:String>
+                                                  </scg:List>
+                                                </uiisi:OperationEntityField.EnumValues>
+                                              </uiisi:OperationEntityField>
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="SLA Violation" DisplayName="SLA Violation" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="True" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="SLAViolation__c" ShouldFilterOnChange="False">
+                                                <uiisi:OperationEntityField.EnumValues>
+                                                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                                                    <x:String>No</x:String>
+                                                    <x:String>Yes</x:String>
+                                                  </scg:List>
+                                                </uiisi:OperationEntityField.EnumValues>
+                                              </uiisi:OperationEntityField>
+                                              <x:Reference>__ReferenceID27</x:Reference>
+                                              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Subject" DisplayName="Subject" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Subject" ShouldFilterOnChange="False" />
+                                            </scg:List>
+                                          </uibi:BusinessEntity.AllFields>
+                                          <uibi:BusinessEntity.EntityMetadata>
+                                            <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID28}" DisplayName="Case" EligibleOperations="4" IsCustomEntity="False" Name="Case" />
+                                          </uibi:BusinessEntity.EntityMetadata>
+                                          <uibi:BusinessEntity.Metadata>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID28">
+                                              <x:String x:Key="Object">Case</x:String>
+                                              <x:String x:Key="FullPath">/Case/{caseId}</x:String>
+                                              <x:String x:Key="Method">PATCH</x:String>
+                                              <x:Null x:Key="BaseObject" />
+                                            </scg:Dictionary>
+                                          </uibi:BusinessEntity.Metadata>
+                                          <uibi:BusinessEntity.SelectedFields>
+                                            <scg:List x:TypeArguments="uibi:EntityField" Capacity="2">
+                                              <x:Reference>__ReferenceID26</x:Reference>
+                                              <x:Reference>__ReferenceID27</x:Reference>
+                                            </scg:List>
+                                          </uibi:BusinessEntity.SelectedFields>
+                                          <uibi:BusinessEntity.TelemetryProperties>
+                                            <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                                          </uibi:BusinessEntity.TelemetryProperties>
+                                        </uibi:BusinessEntity>
+                                      </usia:UpdateRecord.BusinessEntity>
+                                      <usia:UpdateRecord.CachedLookupValues>
+                                        <scg:Dictionary x:TypeArguments="x:String, scg:List(uiisi:LookupValue)" />
+                                      </usia:UpdateRecord.CachedLookupValues>
+                                      <usia:UpdateRecord.DesignConnectionRequest>
+                                        <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="10ed0ce1-cb1f-4429-8e21-d1932902f56e" ConnectionName="arvindhs@clarim.tech" ConnectorKey="uipath-salesforce-sfdc">
+                                          <uiisi:ConnectionParameters.TelemetryInfo>
+                                            <uiisi:TelemetryInfo ActivityPack="UiPath.Salesforce.IntegrationService.Activities" ActivityPackVersion="6.1.0" Source="StudioDesktop" />
+                                          </uiisi:ConnectionParameters.TelemetryInfo>
+                                        </uiisi:ConnectionParameters>
+                                      </usia:UpdateRecord.DesignConnectionRequest>
+                                      <usia:UpdateRecord.SelectedFields>
+                                        <scg:List x:TypeArguments="uibi:EntityField" Capacity="2">
+                                          <uiisi:OperationEntityField x:TypeArguments="x:String" InArgumentValue="{x:Reference __ReferenceID25}" x:Name="__ReferenceID26" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The case id" DisplayName="Case id" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="True" IsMandatory="True" IsParameter="True" IsPriority="False" IsSelected="False" Location="Path" Name="caseId" ShouldFilterOnChange="False">
+                                            <uiisi:OperationEntityField.ArgumentValue>
+                                              <InArgument x:TypeArguments="x:String" x:Name="__ReferenceID25">
+                                                <x:Reference>__ReferenceID24</x:Reference>
+                                              </InArgument>
+                                            </uiisi:OperationEntityField.ArgumentValue>
+                                            <uiisi:OperationEntityField.Value>
+                                              <CSharpValue x:TypeArguments="x:String" x:Name="__ReferenceID24" sap2010:WorkflowViewState.IdRef="CSharpValue`1_203">caseId</CSharpValue>
+                                            </uiisi:OperationEntityField.Value>
+                                          </uiisi:OperationEntityField>
+                                          <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID27" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Status" DisplayName="Status" FormDataType="ExpressionTextBox" InArgumentValue="Escalated" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Status" ShouldFilterOnChange="False">
+                                            <uiisi:OperationEntityField.ArgumentValue>
+                                              <InArgument x:TypeArguments="x:String">Escalated</InArgument>
+                                            </uiisi:OperationEntityField.ArgumentValue>
+                                            <uiisi:OperationEntityField.EnumValues>
+                                              <scg:List x:TypeArguments="x:String" Capacity="4">
+                                                <x:String>New</x:String>
+                                                <x:String>Working</x:String>
+                                                <x:String>Escalated</x:String>
+                                                <x:String>Closed</x:String>
+                                              </scg:List>
+                                            </uiisi:OperationEntityField.EnumValues>
+                                            <uiisi:OperationEntityField.Value>
+                                              <Literal x:TypeArguments="x:String">Escalated</Literal>
+                                            </uiisi:OperationEntityField.Value>
+                                          </uiisi:OperationEntityField>
+                                        </scg:List>
+                                      </usia:UpdateRecord.SelectedFields>
+                                      <usia:UpdateRecord.TelemetryProperties>
+                                        <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                                      </usia:UpdateRecord.TelemetryProperties>
+                                    </usia:UpdateRecord>
+                                  </Sequence>
+                                </ActivityAction>
+                              </umab:ExchangeApplicationCard.Body>
+                              <umab:ExchangeApplicationCard.TenantId>
+                                <InArgument x:TypeArguments="x:String">
+                                  <Literal x:TypeArguments="x:String" Value="" />
+                                </InArgument>
+                              </umab:ExchangeApplicationCard.TenantId>
+                            </umab:ExchangeApplicationCard>
+                          </Sequence>
                         </If.Else>
                       </If>
-                      <Assign sap:VirtualizedContainerService.HintSize="530,83" sap2010:WorkflowViewState.IdRef="Assign_19">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">
-                            <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_70">listofcases[count]</CSharpReference>
-                          </OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_186">caseId</CSharpValue>
-                          </InArgument>
-                        </Assign.Value>
-                      </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="530,83" sap2010:WorkflowViewState.IdRef="Assign_20">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">
-                            <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_71">sub1[count]</CSharpReference>
-                          </OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_187">sub</CSharpValue>
-                          </InArgument>
-                        </Assign.Value>
-                      </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="530,83" sap2010:WorkflowViewState.IdRef="Assign_21">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">
-                            <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_72">From[count]</CSharpReference>
-                          </OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_188">fix</CSharpValue>
-                          </InArgument>
-                        </Assign.Value>
-                      </Assign>
                     </Sequence>
                   </ActivityAction>
                 </umab:ForEachEmailX.Body>
